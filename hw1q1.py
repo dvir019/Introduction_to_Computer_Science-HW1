@@ -40,6 +40,26 @@ def main():
     # Check if the whole purchase is valid
     is_purchase_valid = is_prices_valid * is_quantities_valid
 
+    # Calculate the total prices
+    a_total_price = a_quantity * a_unit_price
+    b_total_price = b_quantity * b_unit_price
+    c_total_price = c_quantity * c_unit_price
+    d_total_price = d_quantity * d_unit_price
+    total_price = a_total_price + b_total_price + c_total_price + d_total_price
+
+    # Calculate the total quantities
+    total_quantity = a_quantity + b_quantity + c_quantity + d_quantity
+
+    # Calculate the average price of the units
+    unit_average_price = total_price / total_quantity
+
+    # Generate the printing message
+    message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price}" * bool(is_purchase_valid)
+    message_to_print += f"Invalid Purchase" * bool(1 - is_purchase_valid)
+
+    # Print the message
+    print(message_to_print)
+
 
 if __name__ == '__main__':
     main()

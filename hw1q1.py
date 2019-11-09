@@ -6,23 +6,23 @@ def main():
     d_type = "D"
 
     # TODO - find good documentation
-    print(f"{a_type}:\n")
-    a_unit_price = int(input())
+    print(f"{a_type}:")
+    a_unit_price = float(input())
     a_quantity = int(input())
 
     # TODO - find good documentation
-    print(f"{b_type}:\n")
-    b_unit_price = int(input())
+    print(f"{b_type}:")
+    b_unit_price = float(input())
     b_quantity = int(input())
 
     # TODO - find good documentation
-    print(f"{c_type}:\n")
-    c_unit_price = int(input())
+    print(f"{c_type}:")
+    c_unit_price = float(input())
     c_quantity = int(input())
 
     # TODO - find good documentation
-    print(f"{d_type}:\n")
-    d_unit_price = int(input())
+    print(f"{d_type}:")
+    d_unit_price = float(input())
     d_quantity = int(input())
 
     # Check if all of the prices are non-negative
@@ -54,7 +54,7 @@ def main():
     unit_average_price = total_price / total_quantity
 
     # Generate the printing message
-    message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price}" * bool(is_purchase_valid)
+    message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price:.2f}" * bool(is_purchase_valid)
     message_to_print += f"Invalid Purchase" * bool(1 - is_purchase_valid)
 
     # Print the message

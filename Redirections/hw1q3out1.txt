@@ -1,0 +1,11 @@
+Player A,
+Insert 1st card:
+Insert 2nd card:
+Insert 3rd card:
+Player B,
+Insert 1st card:
+Insert 2nd card:
+Insert 3rd card:
+Score A - total:27, card2:27
+Score B - total:28, card2:9
+The winner is Player B!

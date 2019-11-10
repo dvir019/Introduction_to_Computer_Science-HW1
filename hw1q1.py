@@ -1,26 +1,26 @@
 def main():
-    # Set the types
+    # Set the types of the products
     a_type = "A"
     b_type = "B"
     c_type = "C"
     d_type = "D"
 
-    # TODO - find good documentation
+    # Get the price and the quantity of product A
     print(f"{a_type}:")
     a_unit_price = float(input())
     a_quantity = int(input())
 
-    # TODO - find good documentation
+    # Get the price and the quantity of product B
     print(f"{b_type}:")
     b_unit_price = float(input())
     b_quantity = int(input())
 
-    # TODO - find good documentation
+    # Get the price and the quantity of product C
     print(f"{c_type}:")
     c_unit_price = float(input())
     c_quantity = int(input())
 
-    # TODO - find good documentation
+    # Get the price and the quantity of product D
     print(f"{d_type}:")
     d_unit_price = float(input())
     d_quantity = int(input())

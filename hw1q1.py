@@ -1,4 +1,13 @@
 def main():
+    """
+    The program gets the price and the quantity of four products,
+    and prints the following information about the purchase:
+    - If it's valid: - The total price of the purchase
+                     - The total products quantity
+                     - The average unit price
+    - If it's invalid: A message that the purchase is invalid
+    """
+
     # Set the types of the products
     a_type = "A"
     b_type = "B"
@@ -47,10 +56,10 @@ def main():
     d_total_price = d_quantity * d_unit_price
     total_price = a_total_price + b_total_price + c_total_price + d_total_price
 
-    # Calculate the total quantities
+    # Calculate the total products quantity
     total_quantity = a_quantity + b_quantity + c_quantity + d_quantity
 
-    # Calculate the average price of the units
+    # Calculate the average unit price
     unit_average_price = total_price / total_quantity
 
     # Generate the printing message

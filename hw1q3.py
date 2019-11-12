@@ -72,7 +72,7 @@ def main():
     # Calculate the total cards weight of player B
     b_cards_total_weight = b_first_card_weight + b_second_card_weight + b_third_card_weight
 
-    # Calculate the final result of the game -     It's a tie.     The winner is Player A!
+    # Calculate the final result of the game
     game_result = "It's a tie."  # Assume it's a tie
     if a_cards_total_weight > b_cards_total_weight:
         game_result = "The winner is Player A!"

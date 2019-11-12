@@ -21,7 +21,7 @@ def main():
     ord_value = ord(a_first_card)
     a_first_card_weight = ord_value - ord('A')  # Assume it's uppercase
     if ord('a') <= ord_value <= ord('z'):  # Check if it's lowercase
-        a_first_card_weight =  ord_value-ord('a')
+        a_first_card_weight = ord_value - ord('a')
 
     # Calculate the weight of the second card of player A
     units_digit = a_second_card % 10
@@ -33,7 +33,7 @@ def main():
 
     # Calculate the weight of the third card of player A
     ord_value = ord(a_third_card)
-    a_third_card_weight = 0
+    a_third_card_weight = 0  # Assume it's zero
     if ord_value % 7 == 0:
         a_third_card_weight = 17
     elif ord_value % 4 == 0:
@@ -46,7 +46,7 @@ def main():
     ord_value = ord(b_first_card)
     b_first_card_weight = ord_value - ord('A')  # Assume it's uppercase
     if ord('a') <= ord_value <= ord('z'):  # Check if it's lowercase
-        b_first_card_weight =  ord_value-ord('a')
+        b_first_card_weight = ord_value - ord('a')
 
     # Calculate the weight of the second card of player B
     units_digit = b_second_card % 10
@@ -58,7 +58,7 @@ def main():
 
     # Calculate the weight of the third card of player B
     ord_value = ord(b_third_card)
-    b_third_card_weight = 0
+    b_third_card_weight = 0  # Assume it's zero
     if ord_value % 7 == 0:
         b_third_card_weight = 17
     elif ord_value % 4 == 0:
@@ -68,7 +68,7 @@ def main():
     b_cards_total_weight = b_first_card_weight + b_second_card_weight + b_third_card_weight
 
     # Calculate the final result of the game -     It's a tie.     The winner is Player A!
-    game_result = "It's a tie."
+    game_result = "It's a tie."  # Assume it's a tie
     if a_cards_total_weight > b_cards_total_weight:
         game_result = "The winner is Player A!"
     elif b_cards_total_weight > a_cards_total_weight:
@@ -82,11 +82,6 @@ def main():
     print(f"Score A - total:{a_cards_total_weight}, card2:{a_second_card_weight}")
     print(f"Score B - total:{b_cards_total_weight}, card2:{b_second_card_weight}")
     print(game_result)
-
-
-    print("\n\n********************")
-    print(f"A: {a_first_card_weight}, {a_second_card_weight}, {a_third_card_weight}")
-    print(f"B: {b_first_card_weight}, {b_second_card_weight}, {b_third_card_weight}")
 
 
 if __name__ == '__main__':

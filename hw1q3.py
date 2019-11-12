@@ -1,4 +1,9 @@
 def main():
+    """
+    The program gets information about six cards - three for each player,
+    and calculates the winner, based on the weight of the cards.
+    """
+
     # Get the cards of player A
     print("Player A,")
     print("Insert 1st card:")

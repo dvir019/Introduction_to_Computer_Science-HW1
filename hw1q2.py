@@ -1,4 +1,9 @@
 def main():
+    """
+    The program gets the employee type, the work day and the work hours,
+    and calculates the employee's salary for that day.
+    """
+
     # Set the employees types
     regular = "r"
     supervisor = "s"

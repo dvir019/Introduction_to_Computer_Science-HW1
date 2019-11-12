@@ -35,16 +35,26 @@ def main():
     d_quantity = int(input())
 
     # Check if all of the prices are non-negative
-    is_prices_valid = (a_unit_price >= 0) and (b_unit_price >= 0) and (c_unit_price >= 0) and (d_unit_price >= 0)
+    is_prices_valid = (a_unit_price >= 0) \
+                      and (b_unit_price >= 0) \
+                      and (c_unit_price >= 0) \
+                      and (d_unit_price >= 0)
 
     # Check if the prices of products A and B are valid
-    is_prices_valid = is_prices_valid and (a_unit_price <= 50) and (b_unit_price <= 30)
+    is_prices_valid = is_prices_valid \
+                      and (a_unit_price <= 50) \
+                      and (b_unit_price <= 30)
 
     # Check if all of the quantities are non-negative
-    is_quantities_valid = (a_quantity >= 0) and (b_quantity >= 0) and (c_quantity >= 0) and (d_quantity >= 0)
+    is_quantities_valid = (a_quantity >= 0) \
+                          and (b_quantity >= 0) \
+                          and (c_quantity >= 0) \
+                          and (d_quantity >= 0)
 
     # Check if the quantities of products A, C and D are valid
-    is_quantities_valid = is_quantities_valid and (d_quantity > 0) and (a_quantity + c_quantity <= 5)
+    is_quantities_valid = is_quantities_valid \
+                          and (d_quantity > 0) \
+                          and (a_quantity + c_quantity <= 5)
 
     # Check if the whole purchase is valid
     is_purchase_valid = is_prices_valid and is_quantities_valid

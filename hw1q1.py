@@ -35,19 +35,19 @@ def main():
     d_quantity = int(input())
 
     # Check if all of the prices are non-negative
-    is_prices_valid = (a_unit_price >= 0) * (b_unit_price >= 0) * (c_unit_price >= 0) * (d_unit_price >= 0)
+    is_prices_valid = (a_unit_price >= 0) and (b_unit_price >= 0) and (c_unit_price >= 0) and (d_unit_price >= 0)
 
     # Check if the prices of products A and B are valid
-    is_prices_valid *= (a_unit_price <= 50) * (b_unit_price <= 30)
+    is_prices_valid = is_prices_valid and (a_unit_price <= 50) and (b_unit_price <= 30)
 
     # Check if all of the quantities are non-negative
-    is_quantities_valid = (a_quantity >= 0) * (b_quantity >= 0) * (c_quantity >= 0) * (d_quantity >= 0)
+    is_quantities_valid = (a_quantity >= 0) and (b_quantity >= 0) and (c_quantity >= 0) and (d_quantity >= 0)
 
     # Check if the quantities of products A, C and D are valid
-    is_quantities_valid *= (d_quantity > 0) * (a_quantity + c_quantity <= 5)
+    is_quantities_valid = is_quantities_valid and (d_quantity > 0) and (a_quantity + c_quantity <= 5)
 
     # Check if the whole purchase is valid
-    is_purchase_valid = is_prices_valid * is_quantities_valid
+    is_purchase_valid = is_prices_valid and is_quantities_valid
 
     # Calculate the total prices
     a_total_price = a_quantity * a_unit_price
@@ -62,9 +62,9 @@ def main():
     # Calculate the average unit price
     unit_average_price = total_price / total_quantity
 
-    # Generate the printing message
-    message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price:.2f}" * bool(is_purchase_valid)
-    message_to_print += f"Invalid Purchase" * bool(1 - is_purchase_valid)
+    # Generate the printing message, by multiply the string in zero or one, depends on the value of the boolean
+    message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price:.2f}" * int(is_purchase_valid)
+    message_to_print += f"Invalid Purchase" * int(not is_purchase_valid)
 
     # Print the message
     print(message_to_print)

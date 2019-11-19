@@ -1,0 +1,11 @@
+Player A,
+Insert 1st card:
+Insert 2nd card:
+Insert 3rd card:
+Player B,
+Insert 1st card:
+Insert 2nd card:
+Insert 3rd card:
+Score A - total:150, card2:128
+Score B - total:150, card2:128
+It's a tie.

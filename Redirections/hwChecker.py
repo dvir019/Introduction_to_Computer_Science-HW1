@@ -151,7 +151,7 @@ def get_files_differences(expected_output_file_name, my_output_file_name):
 
     else:
         differ = difflib.Differ()
-        diffs = differ.compare(expected_output, my_output)
+        diffs = differ.compare(my_output, expected_output)
 
         diffs_string = "\n\t".join([line.strip('\n') for line in diffs if line.startswith(("+ ", "- "))])
 

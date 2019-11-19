@@ -17,7 +17,7 @@ def main():
 
     # Set the salaries per hour
     # *** Weekday = sunday until thursday
-    # *** Weekend = friday until saturday
+    #     Weekend = friday until saturday
     weekday_up_to_8_hours = 30
     weekday_more_than_8_hours = 35
     weekend_up_to_8_hours = 42

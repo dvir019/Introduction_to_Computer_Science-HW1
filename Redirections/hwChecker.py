@@ -76,7 +76,7 @@ def is_arguments_valid(lst):
     for item in lst:
         if not item.isdigit():
             return False
-    if lst[-1] < lst[-2]:
+    if int(lst[-1]) < int(lst[-2]):
         return False
     return True
 

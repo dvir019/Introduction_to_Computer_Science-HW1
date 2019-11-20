@@ -42,7 +42,7 @@ def main():
                      + weekend_more_than_8_hours * max(work_hours - 8, 0)
 
     # Check if it's weekend
-    is_weekend = work_day == friday or work_day == saturday
+    is_weekend = (work_day == friday) or (work_day == saturday)
 
     # Calculate the total salary
     total_salary = weekend_salary * int(is_weekend) \
@@ -50,6 +50,7 @@ def main():
     total_salary *= 1 * int(employee_type == regular) \
                     + 1.2 * int(employee_type == supervisor) \
                     + 1.5 * int(employee_type == manager)
+    # *** I know that the conversion to int is not necessary, but it's more comfortable for me
 
     # Print the result
     print(f"The daily salary is {total_salary:.1f}")

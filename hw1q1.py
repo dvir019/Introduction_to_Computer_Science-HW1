@@ -75,6 +75,7 @@ def main():
     # Generate the printing message, by multiply the string in zero or one, depends on the value of the boolean
     message_to_print = f"{total_price:.2f} {total_quantity} {unit_average_price:.2f}" * int(is_purchase_valid)
     message_to_print += f"Invalid Purchase" * int(not is_purchase_valid)
+    # *** I know that the conversion to int is not necessary, but it's more comfortable for me
 
     # Print the message
     print(message_to_print)

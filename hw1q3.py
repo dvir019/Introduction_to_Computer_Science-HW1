@@ -16,7 +16,7 @@ def main():
     print("Insert 3rd card:")
     a_third_card = input()
 
-    # Get the cards of player A
+    # Get the cards of player B
     print("Player B,")
     print("Insert 1st card:")
     b_first_card = input()
